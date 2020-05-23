@@ -16,8 +16,28 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<!--嵌套的垂直幻灯片1-->
+					<section data-markdown>
+						<textarea data-template>
+						 ## 我是第一页
+						 </textarea>
+					</section>	 
+                    <!--嵌套的垂直幻灯片1-->
+					<section data-markdown>
+						<textarea data-template>
+						 ## 我是第二页
+						 </textarea>
+					</section>
+				</section>	
+				<section>
+					<section data-markdown="test2.md">
+						data-separator="^\r\n\r\n\r\n"
+						data-separator-vertical="^\n\n\n"
+						data-separator-notes="^Note:"
+						data-charset="utf-8"
+					</section>	
+				</section>
 			</div>
 		</div>
 
@@ -31,7 +51,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+                transition:"convex",
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
